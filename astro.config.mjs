@@ -14,6 +14,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  base: "hbisedm", // 文件路径
   integrations: [vue(), tailwind()],
   markdown: {
     syntaxHighlight: "shiki",
