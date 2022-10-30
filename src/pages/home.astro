@@ -1,0 +1,11 @@
+---
+
+const projects = await Astro.glob('../components/experience/*.md')
+
+---
+
+<div>home</div>
+
+<ul>
+  {projects.map(project => <li>{<project.Content />}</li>)}
+</ul>
