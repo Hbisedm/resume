@@ -1,6 +1,10 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "jsx": "preserve"
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "paths": {
+      "@/*": ["src/*"] // 相对位置需要配置baseUrl才能识别，否则会报错
+    }
   }
 }

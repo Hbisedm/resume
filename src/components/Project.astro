@@ -1,0 +1,45 @@
+---
+import { IProject } from "@/config/types";
+
+const projects = await Astro.glob('../config/experiences/*.md')
+
+const getFileName = (path:string) => {
+    return path.replace(/(.*\/)*([^.]+).*/ig,"$2");
+}
+
+// console.log(projects[2].getHeadings())
+// console.log(projects[2].frontmatter)
+
+// console.log(projects[2].file)
+// console.log(getFileName(projects[2].file))
+
+const transData = async () => {
+    return await projects.map(item => {
+        return {
+            projectName: item.frontmatter.projectName ?? getFileName(item.file),
+            projectTime: item.frontmatter.projectTime,
+            projectContent: item.Content,
+        }as IProject
+    })
+
+}
+
+const projectData: IProject[] = await transData()
+
+
+---
+
+  <div class="mx-4">
+    <h1 class="mb-4 text-3xl md:text-4xl text-gray-900 font-bold">项目经历</h1>
+      {
+        projectData.map(item => {
+            return <section class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl md:text-2xl font-medium text-gray-800">{item.projectName}</h3>
+                    <small class="text-sm text-gray-600">{item.projectTime}</small>
+                </div>
+                {<item.projectContent></item.projectContent>}
+            </section>
+        })
+      }
+  </div>

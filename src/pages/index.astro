@@ -1,13 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import info  from '../../meta.config.js';
+
+import '@/assets/index.css';
 
 import Test from './test.vue'
 import Card from '../components/Card.astro';
+import { info } from "@/config/meta";
 
 import  '../assets/iconfont.css'
 import UserInfo from '../components/UserInfo.vue';
+import Skill from '@/components/Skill.vue';
+import Education from '@/components/Education.vue';
+import Work from '@/components/Work.vue';
+import Project from '@/components/Project.astro';
+import Skills from "@/components/Skills.astro";
 
 // 欢迎来到 Astro！这些三横线所围住的代码
 // 就是你的“组件 front matter”。它不会运行在浏览器中。
@@ -18,83 +25,25 @@ console.log("它运行在终端而非浏览器！");
 <Layout title="Welcome to Astro.">
   <div class="mt-6 max-w-screen-lg md:flex mx-auto">
 
-    <UserInfo />
+    <UserInfo client:load />
     <div class="md:w-2/3 p-2 w-full">
-      <div class="mx-4 mb-6">
-        <h1 class="mb-4 text-4xl text-gray-700 font-bold">个人评价</h1>
-        <p class="text-lg">
-          这里写个人评价 这里写个人评价 这里写个人评价 这里写个人评价
-          这里写个人评价 这里写个人评价 这里写个人评价 这里写个人评价
-          这里写个人评价 这里写个人评价 这里写个人评价 这里写个人评价
-        </p>
+      <Skills></Skills>
+      <Education></Education>
+      <Work></Work>
+      <Project></Project>
       </div>
-      <div class="mx-4">
-        <h1 class="mb-4 text-4xl text-gray-700 font-bold">工作经历</h1>
-        <ul>
-          <li class="mb-4">
-            <h2 class="text-3xl font-medium text-gray-800">ABC 公司</h2>
-            <div>
-              <i class="bx bx-calendar text-sm" style="color: #666"></i>
-              <small class="text-sm text-gray-600">2021年8月 - 至今</small>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">DEF项目</h3>
-                <p>基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果</p>
-              </div>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">GHI项目</h3>
-                <p>基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果</p>
-              </div>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">其他项目</h3>
-                <p>写2 - 3 个核心项目就足够了, 能体现出你的价值的</p>
-              </div>
-            </div>
-          </li>
-          <li class="mb-4">
-            <h2 class="text-3xl font-medium text-gray-800">CDE 公司</h2>
-            <div>
-              <i class="bx bx-calendar text-sm" style="color: #666"></i>
-              <small class="text-sm text-gray-600">2021年8月 - 至今</small>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">DEF项目</h3>
-                <p>基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果</p>
-              </div>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">GHI项目</h3>
-                <p>基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果</p>
-              </div>
-            </div>
-            <div class="mt-1">
-              <div>
-                <h3 class="text-2xl font-medium text-gray-800">其他项目</h3>
-                <p>写2 - 3 个核心项目就足够了, 能体现出你的价值的</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="mx-4">
-        <h1 class="mb-4 text-4xl text-gray-700 font-bold">Skill</h1>
+      <!-- <div class="mx-4">
+        <h1 class="mb-4 text-4xl text-gray-700 font-bold">技能</h1>
         <ul>
           <li class="mb-6 flex flex-wrap">
-            <!-- {
-              skills.map((name) => {
-                return <Skill name={name} client:load />;
+            {
+              info.skills.map((item) => {
+                return <Skill skill={item} client:load />;
               })
-            } -->
+            }
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 </Layout>
