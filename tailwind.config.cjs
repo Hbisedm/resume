@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     minHeight: {
       40: "40px",
     },
-    extend: {},
+    extend: {
+      screens: {
+        print: { raw: "print" },
+      },
+    },
   },
   plugins: [],
 };

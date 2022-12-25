@@ -1,27 +1,29 @@
 <template>
-  <div class="mx-4">
-    <h1 class="mb-4 text-3xl md:text-4xl text-gray-900 font-bold">工作经历</h1>
-    <section class="mb-4">
-      <h2 class="text-xl md:text-2xl font-medium text-gray-800">
-        东莞市盛世万丰绿园网络科技有限公司
-      </h2>
-      <div>
-        <i class="bx bx-calendar text-sm" style="color: #666"></i>
-        <small class="text-sm text-gray-600">2022年3月 - 至今</small>
+  <div class="mx-4 mb-2 md:mb-6">
+    <resume-title title="工作经历"></resume-title>
+    <section class="mb-2" v-for="(item, index) in workExperience" :key="index">
+      <div class="md:flex md:items-baseline md:justify-between">
+        <h2
+          class="text-xl md:text-2xl font-medium text-gray-800 dark:text-white"
+        >
+          {{ item.companyName }}
+        </h2>
+        <div class="mb-2">
+          <span class="mr-4">{{ item.position }}</span>
+          <small class="text-sm text-gray-600 dark:text-white">{{
+            item.rangeTime
+          }}</small>
+        </div>
       </div>
-    </section>
-    <section class="mb-4">
-      <h2 class="text-xl md:text-2xl font-medium text-gray-800">
-        深圳前海思佳智能有限公司
-      </h2>
-      <div>
-        <i class="bx bx-calendar text-sm" style="color: #666"></i>
-        <small class="text-sm text-gray-600">2021年7月 - 2022年2月</small>
-      </div>
+      <div class="text-sm" v-html="item.workContent"></div>
     </section>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { info } from "@/config/meta";
+import resumeTitle from "@/components/Title.vue";
+const { workExperience } = info;
+</script>
 
 <style scoped></style>

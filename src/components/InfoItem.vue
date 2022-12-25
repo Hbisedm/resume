@@ -1,5 +1,5 @@
 <template>
-  <div class="my-5 text-lg text-gray-600 flex">
+  <div class="my-5 text-lg text-gray-600 flex dark:text-white">
     <div class="mr-2">
       <span :class="{ iconfont: true, [`icon-${type}-fill`]: true }"></span>
     </div>

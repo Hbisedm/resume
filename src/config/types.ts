@@ -29,6 +29,7 @@ export interface ISkill {
 export interface IWorkExperience {
   companyName: string;
   rangeTime: string;
+  position: string;
   workContent?: string;
 }
 
@@ -36,6 +37,15 @@ export interface IProject {
   projectName: string;
   projectTime: string;
   projectContent: any;
+  projectSourcePath?: string;
+}
+
+export interface IEducation {
+  universityEducationalBackground: string;
+  universityName: string;
+  universityTime: string;
+  universityMajor: string;
+  universityExperience: string;
 }
 
 export interface IInfo {
@@ -48,9 +58,7 @@ export interface IInfo {
   email: string;
   mobile: string;
   realMobile: string;
-  university: string;
-  major: string;
-  universityTime: string;
+  education: IEducation;
   location: string;
   github: string;
   skills: ISkill[];

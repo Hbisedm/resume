@@ -5,6 +5,8 @@ import remarkHtml from "remark-html";
 import remarkToc from "remark-toc";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
+import rehypeSlug from "rehype-slug";
+import addClasses from "rehype-add-classes";
 
 // https://astro.build/config
 import vue from "@astrojs/vue";
@@ -22,10 +24,26 @@ export default defineConfig({
       theme: "monokai",
     },
     remarkPlugins: [
-      [remarkHtml, { closeEmptyElements: true }],
-      remarkGfm,
-      remarkToc,
+      // [remarkHtml, { closeEmptyElements: true }],
+      // remarkGfm,
+      // remarkToc,
     ],
-    rehypePlugins: [remarkRehype],
+    rehypePlugins: [
+      [
+        rehypeSlug,
+        {
+          prefix: "hbisedm-",
+        },
+      ],
+      [
+        addClasses,
+        {
+          h1: "sub-title__h1",
+          h2: "sub-title__h2",
+          p: "content",
+        },
+      ],
+      remarkRehype,
+    ],
   },
 });
