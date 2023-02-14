@@ -1,6 +1,6 @@
 ---
 projectName: "兜宝精选商家端"
-projectTime: "2022.08 - 至今"
+projectTime: "2022.08 - 2023.01"
 ---
 
 ## 项目概述

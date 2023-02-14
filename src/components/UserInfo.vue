@@ -6,7 +6,7 @@
           <img
             alt="头像"
             title="头像"
-            class="h-32 w-32 rounded-full mx-auto mx-4"
+            class="h-32 w-32 rounded-full mx-auto mx-4 object-cover"
             :src="info.avatar"
             @click="handleToGithub"
           />
@@ -60,6 +60,7 @@
 <script setup lang="ts">
 import { info } from "@/config/meta";
 import InfoItem from "./InfoItem.vue";
+import { useAttrs } from "vue";
 
 const handleToGithub = () => {
   window.open(info.github);

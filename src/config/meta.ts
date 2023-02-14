@@ -41,7 +41,8 @@ export const info: IInfo = {
   age: 24,
   weChat: "SamWechat98",
   email: "hbisedm666@163.com",
-  mobile: "134****8587",
+  mobile: "1341****587",
+  // mobile: "13417038587",
   realMobile: "",
   education: {
     universityMajor: "信息工程",
@@ -61,7 +62,7 @@ export const info: IInfo = {
   workExperience: [
     {
       companyName: "东莞市盛世万丰绿园网络科技有限公司",
-      rangeTime: "2022.03 - 至今",
+      rangeTime: "2022.03 - 2023.01",
       position: "前端工程师",
       workContent: `
       <ul>
