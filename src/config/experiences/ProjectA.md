@@ -9,7 +9,7 @@ projectTime: "2022.08 - 2023.01"
 
 ## 技术选型
 
-React、Antd-Mobile
+React、Antd-Mobile、Typescript
 
 ## 个人职责
 

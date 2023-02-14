@@ -6,7 +6,7 @@
           <img
             alt="头像"
             title="头像"
-            class="h-32 w-32 rounded-full mx-auto mx-4 object-cover"
+            class="h-32 w-32 rounded-full mx-auto mx-4 object-cover print:rounded-none print:h-40"
             :src="info.avatar"
             @click="handleToGithub"
           />
