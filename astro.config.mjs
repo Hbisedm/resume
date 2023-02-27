@@ -40,6 +40,7 @@ export default defineConfig({
         {
           h1: "sub-title__h1",
           h2: "sub-title__h2",
+          ul: "sub-title__ul",
           p: "content",
         },
       ],

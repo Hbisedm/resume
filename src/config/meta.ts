@@ -50,14 +50,14 @@ export const info: IInfo = {
     universityName: "广州大学华软软件学院",
     universityTime: "2017.09 - 2021.06",
     universityExperience: `
-    <ul>
+    <ul class="sub-title__ul">
       <li>成绩良好</li>
       <li>获得学生奖学金二等奖、三等奖</li>
     </ul>
     `,
   },
-  location: "DongGuan",
-  github: "http://github.com/hbisedm",
+  location: "ShenZhen",
+  github: "github.com/hbisedm",
   skills,
   workExperience: [
     {
@@ -65,43 +65,30 @@ export const info: IInfo = {
       rangeTime: "2022.03 - 2023.01",
       position: "前端工程师",
       workContent: `
-      <ul>
-        <li>负责平台的迭代优化</li>
-        <li>负责对UI图进行一比一还原</li>
-        <li>负责对需求进行定制化开发</li>
-        <li>负责公司业务H5端、后台的开发</li>
-        <li>完成移动端适配</li>
-        <li>完成测试并修复开发过程中发现的bug</li>
+      <ul class="sub-title__ul">
+        <li>负责对H5和后台的业务需求进行定制化开发</li>
+        <li>与产品经理一起探讨分析业务需求和页面布局的设计</li>
+        <li>维护组件库,重构老代码和适应新需求</li>
+        <li>完成H5页面的适配</li>
+        <li>优化用户端页面的首屏加载速度</li>
       </ul>
       `,
     },
     {
       companyName: "深圳前海思佳智能有限公司",
-      rangeTime: "2021.07 - 2022.02",
+      rangeTime: "2020.10 - 2022.02",
       position: "前端工程师",
       workContent: `
-      <ul>
+      <ul class="sub-title__ul">
+        <li>负责项目文档的编写</li>
         <li>参与移动端开发</li>
-        <li>参与用户需求分析</li>
+        <li>与用户进行需求分析</li>
         <li>参与自研Vue框架的基建</li>
         <li>参与项目后端代码的编写</li>
-        <li>参与维护现有的24个应用</li>
+        <li>参与维护现有的24个子应用</li>
         <li>完成对项目的部署</li>
         <li>完成开发6个新应用(Vue + Java)</li>
         <li>参与使用 Nginx 配置,为各个子项目分配端口</li>
-      </ul>
-      `,
-    },
-    {
-      companyName: "广州市齐明软件科技有限公司",
-      rangeTime: "2020.10 - 2021.03",
-      position: "Java工程师",
-      workContent: `
-      <ul>
-        <li>负责项目文档的编写</li>
-        <li>负责测试反馈的bug进行修复</li>
-        <li>参与Java开发业务工作</li>
-        <li>参与web端页面的编写</li>
       </ul>
       `,
     },

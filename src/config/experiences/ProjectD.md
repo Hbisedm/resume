@@ -1,17 +1,22 @@
 ---
-projectName: "Mini-Vue"
-projectTime: "2022.06 - 2022.08"
-projectSourcePath: "https://github.com/Hbisedm/mini-vue-guide"
+projectName: "中华商务APP"
+projectTime: "2021.11 - 2022.02"
 ---
 
 ## 项目概述
 
-> 本项目从零逐步重写一个涵盖 Vue3 核心逻辑的的微模型，遵循真实的 Vue3 代码结构，但不会包含所有的优化以及非必要的功能，主要包括三大核心模块: reactivity（响应系统）、runtime（渲染器）、compiler（编译器），以此来深入学习理解 Vue3 源码。
+专为中华商务打造的一个集办公协同、移动业务处理、企业资讯于一体，与 ERP、MES 等系统深度融合的应用平台。
 
-## 技术选型
+## 个人职责
 
-Jest、Rollup
+- 负责开发会议室预订、访客管理、薪资查询等业务的后端接口开发
+- 在开发安卓应用适,使用复用组件思想,细粒度封装可复用的安卓组件
+- 与主管一起和用户参与需求讨论和分析,学习业务知识
+- 开发 H5 的业务模板,为每个场景业务做基底模板,提高开发效率
 
-## 项目地址
+## 项目难点
 
-[https://github.com/Hbisedm/mini-vue-guide](https://github.com/Hbisedm/mini-vue-guide)
+- 在原生内嵌套 H5 子应用
+- 为了让移动端和 H5 直接进行通信,配置 JSBridge 调用原生能力,使用户体验和性能提升
+- 参与将 Flutter 版重构为 Android 原生版
+- 编写 Shell 脚本为 Nginx 中配置每个业务接口与指定端口

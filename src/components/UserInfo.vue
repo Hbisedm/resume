@@ -37,6 +37,9 @@
           <div class="md:text-lg text-gray-600">
             学历: {{ info.education.universityEducationalBackground }}
           </div>
+          <div class="md:text-lg text-gray-600">
+            工作经验: {{ info.experience.replace("工作经验", "") }}
+          </div>
         </div>
         <div
           class="hidden print:flex print:flex-col text-center items-start text-lg font-bold"
@@ -44,6 +47,7 @@
           <div class="md:text-lg text-gray-600">手机: {{ info.mobile }}</div>
           <div class="md:text-lg text-gray-600">邮箱: {{ info.email }}</div>
           <div class="md:text-lg text-gray-600">微信: {{ info.weChat }}</div>
+          <div class="md:text-lg text-gray-600">github: {{ info.github }}</div>
         </div>
       </div>
       <div class="mx-4 my-4 hidden md:block">
